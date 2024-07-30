@@ -11353,9 +11353,9 @@
     Object.defineProperty(d, "__esModule", { value: !0 });
 });
 
-function _getInfoInNumber(input) {
+function _getInfoInNumber(string) {
   try {
-    let output = interprete_números.interprete_números(input);
+    let output = interprete_números.interprete_números(string);
     let regionNames = new Intl.DisplayNames(["en"], { type: "region" });
     let regionNamesES = new Intl.DisplayNames(["es"], { type: "region" });
 
@@ -11382,7 +11382,7 @@ function _getInfoInNumber(input) {
     };
   } catch (error) {
     try {
-      let output = interprete_números.interprete_números(input);
+      let output = interprete_números.interprete_números(string);
 
       return {
         codeCountry: output.country,
@@ -11405,14 +11405,16 @@ function _getInfoInNumber(input) {
           ".svg",
       };
     } catch (error) {
-      return undefined;
+      return {
+        error,
+      };
     }
   }
 }
 
-function _findPhoneNumbers(text) {
+function _findPhoneNumbers(string) {
   let result = interprete_números.findPhoneNumbersInText(
-    text,
+    string,
     interprete_números.getCountries()
   );
   let out = [];
