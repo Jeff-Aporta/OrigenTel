@@ -124,41 +124,37 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                 </LIDocTitulo>
                             </ul>
                             <br />
-                            <SubEnvolventeSeccion>
-                                <Retorno />
-                            </SubEnvolventeSeccion>
-
+                            <Retorno />
                             <br />
+                            <EjemploDeUso />
+                            <br />
+                            <ProbarEnTiempoReal />
+                        </FormatoDoc>
+                    );
 
-                            <SubEnvolventeSeccion>
+                    function EjemploDeUso() {
+                        return (
+                            <FormatoDoc>
                                 <h2>
+                                    Ejemplo de uso&nbsp;
                                     <i
-                                        className="fa-solid fa-play"
+                                        class="fa-solid fa-thumbs-up"
                                         style={{
-                                            color: "mediumaquamarine"
+                                            color: "turquoise"
                                         }}
-                                    /> Probar en tiempo real
-                                </h2>
-                                <ExtraerUnNumero />
-                            </SubEnvolventeSeccion>
-
-                            <br />
-
-                            <SubEnvolventeSeccion>
-                                <h2>
-                                    Ejemplo de uso
+                                    />
                                 </h2>
                                 <Code linenumbers={false}>{`
                                     let info = _getInfoInNumber("+1234567890");
                                     console.log(info.nameCountry); // "United States"
                                 `}</Code>
-                            </SubEnvolventeSeccion>
-                        </FormatoDoc>
-                    );
+                            </FormatoDoc>
+                        )
+                    }
 
                     function Retorno() {
                         return (
-                            <FormatoDoc>
+                            <SubEnvolventeSeccion>
                                 <h2>
                                     Retorno:
                                 </h2>
@@ -199,18 +195,18 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                             isPosible (Boolean): Indica si el número es posible.
                                         </LIDocTitulo>
                                         <LIDocTitulo>
-                                            flagSVG_4x3 (String): URL de la bandera del país en formato 4x3.
+                                            flagSVG_4x3 (String): URL de la bandera del país en formato 4×3.
                                         </LIDocTitulo>
                                         <LIDocTitulo>
-                                            flagSVG_1x1 (String): URL de la bandera del país en formato 1x1.
+                                            flagSVG_1x1 (String): URL de la bandera del país en formato 1×1.
                                         </LIDocTitulo>
                                     </ul>
                                 </small>
-                            </FormatoDoc>
+                            </SubEnvolventeSeccion>
                         );
                     }
 
-                    function ExtraerUnNumero() {
+                    function ProbarEnTiempoReal() {
                         function probar() {
                             let value = document.getElementById("number").value;
                             console.log("probar")
@@ -228,84 +224,95 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                         }
 
                         return (
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    gap: "10px",
-                                }}
-                            >
+                            <SubEnvolventeSeccion>
+                                <h2>
+                                    <i
+                                        className="fa-solid fa-play"
+                                        style={{
+                                            color: "turquoise"
+                                        }}
+                                    /> Probar en tiempo real
+                                </h2>
+
                                 <div
                                     style={{
-                                        textAlign: "center"
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        gap: "10px",
                                     }}
                                 >
                                     <div
                                         style={{
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            justifyContent: "flex-start",
-                                            alignItems: "flex-start",
-                                            textAlign: "left",
+                                            textAlign: "center"
                                         }}
                                     >
-                                        <span>
-                                            Ingresa un número de teléfono
-                                            <br />
-                                            <small
-                                                style={{
-                                                    opacity: 0.5
-                                                }}
-                                            >
-                                                Ejemplo: +573107257816
-                                            </small>
-                                        </span>
-                                        <br />
                                         <div
                                             style={{
                                                 display: "flex",
+                                                flexDirection: "column",
                                                 justifyContent: "flex-start",
-                                                alignItems: "start",
-                                                flexDirection: "row",
-                                                gap: "20px",
+                                                alignItems: "flex-start",
+                                                textAlign: "left",
                                             }}
                                         >
-                                            <img
-                                                id="img-prueba"
+                                            <span>
+                                                Ingresa un número de teléfono
+                                                <br />
+                                                <small
+                                                    style={{
+                                                        opacity: 0.5
+                                                    }}
+                                                >
+                                                    Ejemplo: +573107257816
+                                                </small>
+                                            </span>
+                                            <br />
+                                            <div
                                                 style={{
-                                                    maxWidth: "30px",
-                                                    margin: "10px auto",
+                                                    display: "flex",
+                                                    justifyContent: "flex-start",
+                                                    alignItems: "start",
+                                                    flexDirection: "row",
+                                                    gap: "20px",
                                                 }}
-                                            />
-                                            <TextField
-                                                style={{
-                                                    cursor: "text",
-                                                    padding: "5px",
-                                                    verticalAlign: "top",
-                                                }}
-                                                type="text"
-                                                id="number"
-                                                placeholder="Número a comprobar"
-                                                onChange={probar}
-                                                onKeyup={probar}
-                                            />
+                                            >
+                                                <img
+                                                    id="img-prueba"
+                                                    style={{
+                                                        maxWidth: "30px",
+                                                        margin: "10px auto",
+                                                    }}
+                                                />
+                                                <TextField
+                                                    style={{
+                                                        cursor: "text",
+                                                        padding: "5px",
+                                                        verticalAlign: "top",
+                                                    }}
+                                                    type="text"
+                                                    id="number"
+                                                    placeholder="Número a comprobar"
+                                                    onChange={probar}
+                                                    onKeyup={probar}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
+                                    <div id="resultados-prueba">
+                                    </div>
                                 </div>
-                                <div id="resultados-prueba">
-                                </div>
-                            </div>
+                            </SubEnvolventeSeccion>
                         );
                     }
                 }
             }
         },
         {
-            nombre: "_findPhoneNumbers(string)",
+            nombre: "_findPhoneNumbers(String)",
             nombre_render_as: "CodeInline",
             contenido: (thisObj) => {
                 return (
-                    <div>
+                    <FormatoDoc>
                         Esta función busca números de teléfono en un texto dado y devuelve información detallada sobre cada número encontrado.
                         <br />
                         <Parametros />
@@ -314,10 +321,10 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                         <br />
                         <Descripcion />
                         <br />
-                        <ProbarEnTiempoReal />
-                        <br />
                         <EjemploDeUso />
-                    </div>
+                        <br />
+                        <ProbarEnTiempoReal />
+                    </FormatoDoc>
                 );
 
                 function Descripcion() {
@@ -376,7 +383,7 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                 <i
                                     className="fa-solid fa-play"
                                     style={{
-                                        color: "mediumaquamarine"
+                                        color: "turquoise"
                                     }}
                                 /> Probar en tiempo real
                             </h2>
@@ -395,11 +402,19 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                         width: "100%",
                                         backgroundColor: "rgba(255,255,255,0.05)",
                                     }}
+                                    inputProps={{
+                                        style: {
+                                            color: "skyblue",
+                                        }
+                                    }}
                                     id="text"
                                     defaultValue={[
-                                        "Hola amigos, mi nombre es Jeffrey Agudelo y mi número es +573107257814, el número de mi madre es +7 8005553535 y el de mi padre es (+91)9098765432, el de mi tío es +3-161-3355460 y el de mi tía es +52 8886732311",
-                                        "es importante destacar que los números escritos anteriormente tienen diferentes formatos, espacios, guiones y paréntesis, esta función los encontrará y los extraerá."
-                                    ].join("\n\n")}
+                                        `Hola amigos, mi nombre es Jeffrey Agudelo y mi número es +573107257814, el número de mi madre 
+                                        es +7 8005553535 y el de mi padre es (+91)9098765432, el de mi tío es +3-161-3355460 y el de 
+                                        mi tía es +52 8886732311`,
+                                        `es importante destacar que los números escritos anteriormente tienen diferentes formatos, espacios, 
+                                        guiones y paréntesis, esta función los encontrará y los extraerá.`
+                                    ].map(r => r.split("\n").map(r => r.trim()).join(" ")).join("\n\n")}
                                 >
                                 </TextField>
                                 <br />
@@ -433,15 +448,21 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
 
                 function EjemploDeUso() {
                     return (
-                        <div>
+                        <FormatoDoc>
                             <h2>
-                                Ejemplo de uso
+                                Ejemplo de uso&nbsp;
+                                <i
+                                    class="fa-solid fa-thumbs-up"
+                                    style={{
+                                        color: "turquoise"
+                                    }}
+                                />
                             </h2>
                             <Code linenumbers={false}>{`
                                 let phoneNumbersInfo = _findPhoneNumbers("Contacta a Juan al +1234567890 o a María al +0987654321.");
                                 console.log(phoneNumbersInfo);
                             `}</Code>
-                        </div>
+                        </FormatoDoc>
                     );
                 }
             },
@@ -451,11 +472,11 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
             contenido: (thisObj) => {
                 return (
                     <FormatoDoc>
-                        Una vez importada la librería en el head, ya sea con la CDN o si descargaste el archivo, podrás ejecutar el código que se presentará a continuación:
+                        Una vez importada la librería en el head, ya sea con la CDN o si descargaste el archivo, podrás ejecutar el
+                        código que se presentará a continuación:
                         <br /><br />
                         <AnalizandoUnNumeroDeTelefono />
                         <br />
-                        <hr />
                         <br />
                         <AnalizandoCadenasDeTextoConRuido />
                     </FormatoDoc>
@@ -466,7 +487,7 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                         <SubEnvolventeSeccion>
                             <h2>
                                 <Resaltar>
-                                    ANALIZANDO UN NÚMERO DE TELÉFONO
+                                    <i class="fa-solid fa-angles-right" /> ANALIZANDO UN NÚMERO DE TELÉFONO
                                 </Resaltar>
                             </h2>
 
@@ -505,7 +526,7 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                             <FormatoDoc>
                                 <h2>
                                     <Resaltar>
-                                        ANALIZANDO CADENAS DE TEXTO CON RUIDO
+                                        <i class="fa-solid fa-angles-right" /> ANALIZANDO CADENAS DE TEXTO CON RUIDO
                                     </Resaltar>
                                 </h2>
                                 Se le denomina ruido a toda a toda perturbación textual que haya en el input, que no corresponda con
@@ -515,11 +536,11 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                 <br /><br />
                                 Para la cadena "Mi número es (+57)310-725 7814, me llamo Jeff", el número a extraer es +573107257814,
                                 tiene ruido por la derecha, por la izquierda y en medio, sin embargo el siguiente código extraerá y
-                                retornará los datos de todos los números con formato internacional que encuentre en la cadena suministrada
+                                retornará los datos de todos los números con formato internacional que encuentre en la cadena suministrada.
                                 <Code>{`
                                 let results = _findPhoneNumbers("Mi número es (+57)310-725 7814, me llamo Jeff")
                             `}</Code>
-                                La función _findPhoneNumbers() devuelve un arreglo con el _getInfoInNumber() de todos los números encontrados
+                                La función _findPhoneNumbers() devuelve un arreglo con el _getInfoInNumber() de todos los números encontrados.
                                 <br /><br />
                                 Salida esperada:
 
@@ -561,10 +582,10 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
 
                 function Resumen() {
                     return (
-                        <div>
-                            <h2>
+                        <FormatoDoc>
+                            <h1>
                                 Resumen
-                            </h2>
+                            </h1>
 
                             Esto lo hace por medio de expresiones regulares, y algoritmos, pudiendo retornar así un objeto con la
                             información que puede extraer del número, para que quede claro, les voy a explicar con un ejemplo lo
@@ -573,7 +594,7 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                             Hablemos en el caso de Colombia, los teléfonos tienen 8, 10 y 11 dígitos, debe existir una función que
                             una vez reconocido el indicativo del país, extraiga el resto del número para hacer las correspondientes
                             verificaciones. En el caso de los números con 10 dígitos.
-                        </div>
+                        </FormatoDoc>
                     );
                 }
 
@@ -582,15 +603,16 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                         <div>
                             <SubEnvolventeSeccion>
                                 <h2>
-                                    Reglas para Colombia
+                                    <Resaltar>
+                                        Reglas para Colombia
+                                    </Resaltar>
                                 </h2>
 
                                 <ExpresionRegularParaTelefoniaMovilColombia />
 
                                 También hay que analizar que los números de 10 dígitos en colombia, aparte de iniciar por 3 sus siguientes 2 dígitos tienen restricciones,
                                 los primeros 3 dígitos para esta clase de números son algunos de estos:
-                                <br /><br />
-
+                                <br />
                                 <IndicativosTelefoniaColombia />
                                 <TestingIndicativosTelefoniaColombia />
                                 <ExpresionesRegularesCortas />
@@ -600,10 +622,10 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
 
                     function ExpresionRegularParaTelefoniaMovilColombia() {
                         return (
-                            <div>
-                                La expresión regular es la siguiente
+                            <FormatoDoc>
+                                La expresión regular es la siguiente:
 
-                                <Code>{`
+                                <Code linenumbers={false}>{`
                                     let E10 = new RegExp(
                                         "3333(?:0(?:0\\d|1[0-5])|[4-9]\\d\\d)\\d{3}|33(?:00|3[0-24-9])\\d{6}|3(?:0[0-5]|1\\d|2[0-3]|5[01]|70)\\d{7}"
                                     );
@@ -611,31 +633,33 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
 
                                 y con esto podremos comprobar si un número de al menos 10 dígitos, está bien o mal escrito, ejemplo:
                                 <br /><br />
-                                Número bien escrito con formato colombiano
+                                Número bien escrito con formato colombiano.
 
                                 <Code>{`
                                     E10.test("3107234567") //true
                                 `}</Code>
 
-                                Número no escrito con formato correcto, no tiene el mínimo de 10 dígitos
+                                Número no escrito con formato correcto, no tiene el mínimo de 10 dígitos.
 
                                 <Code>{`
                                     E10.test("310723456") //false
                                 `}</Code>
-                            </div>
+                            </FormatoDoc>
                         );
                     }
 
                     function IndicativosTelefoniaColombia() {
                         return (
-                            <div>
-                                <h3>
-                                    Indicativos de empresas de telefonía en Colombia
-                                </h3>
+                            <FormatoDoc>
+                                <h2>
+                                    <Resaltar>
+                                        Indicativos de empresas de telefonía en Colombia
+                                    </Resaltar>
+                                </h2>
+
+                                En 2024, Colombia tiene los siguientes indicativos de empresas de telefonía:
 
                                 <Code nocode>{`
-                                    En 2024, Colombia tiene los siguientes indicativos de empresas de telefonía:
-    
                                     300, 301, 302, 304, 305 (Tigo)
                                     303 (Uff Móvil)
                                     304 (UNE)
@@ -648,13 +672,13 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
 
                                 lo que significa que la expresión regular anteriormente descrita debe ser capaz de excluir
                                 cualquier otro número que no empiece por alguno de estos números, siendo así entonces vamos a probar.
-                            </div>
+                            </FormatoDoc>
                         );
                     }
 
                     function TestingIndicativosTelefoniaColombia() {
                         return (
-                            <div>
+                            <FormatoDoc>
                                 <Code>{`
                                     E10.test("3011234567") //true
                                     E10.test("3031234567") //true
@@ -667,13 +691,13 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                 Como se puede observar, los números que no inicien por estos indicativos, no son números válidos para
                                 números de 10 dígitos de colombia de esta misma manera, se pueden generar las expresiones regulares para
                                 los números colombianos de 8 y 11 dígitos:
-                            </div>
+                            </FormatoDoc>
                         );
                     }
 
                     function ExpresionesRegularesCortas() {
                         return (
-                            <div>
+                            <FormatoDoc>
                                 <Code>{`
                                     let E8 = new RegExp("[124-8][2-9]\d{6}")
                                     let E11 = new RegExp("1800\d{7}")
@@ -681,7 +705,7 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                 `}</Code>
 
                                 Estas expresiones son más cortas, puesto que las restricciones son menores.
-                            </div>
+                            </FormatoDoc>
                         );
                     }
                 }
