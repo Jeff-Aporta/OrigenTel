@@ -1,6 +1,6 @@
 const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
     nombre: 'OrigenTel JS',
-    slogan: 'La herramienta definitiva para identificar el origen de cualquier número telefónico',
+    slogan: 'La herramienta definitiva para el origen y otra información de cualquier número telefónico',
     img: 'src/img/logo.jpeg',
 
     github: "https://github.com/Jeff-Aporta/OrigenTel",
