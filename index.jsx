@@ -2,8 +2,9 @@ ReactDOM.render(
     <div className="esquema-principal">
         <div className="contenedor-pagina">
             <EnvolventePagina>
-                <PaginaOrigenTel />
+                {esquemaGeneralLibreria(_ORIGEN_TEL_)}
             </EnvolventePagina>
+            <BotonLinkPortafolio />
         </div>
     </div>,
     document.querySelector('body')
