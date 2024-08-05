@@ -418,6 +418,8 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                 <br />
                                 <br />
                                 <Button
+                                    size="large"
+                                    fullWidth
                                     variant="contained"
                                     className="btn btn-primary"
                                     style={{
