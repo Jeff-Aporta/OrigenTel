@@ -159,49 +159,47 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                                     Retorno:
                                 </h2>
                                 Un objeto con la siguiente estructura:
-                                <small>
-                                    <ul className="punto-centrico">
-                                        <LIDocTitulo>
-                                            codeCountry (String): Código del país.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            codeCall (String): Código de llamada del país.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            numberWithoutCodeCall (String): Número sin el código de llamada.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            complete (String): Número completo.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            nameCountry (String): Nombre del país en inglés.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            nameCountryES (String): Nombre del país en español.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            formatNational (String): Número en formato nacional.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            formatInternational (String): Número en formato internacional.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            formatRFC3966 (String): Número en formato RFC3966.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            type (String): Tipo de número (móvil, fijo, etc.).
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            isPosible (Boolean): Indica si el número es posible.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            flagSVG_4x3 (String): URL de la bandera del país en formato 4×3.
-                                        </LIDocTitulo>
-                                        <LIDocTitulo>
-                                            flagSVG_1x1 (String): URL de la bandera del país en formato 1×1.
-                                        </LIDocTitulo>
-                                    </ul>
-                                </small>
+                                <ul className="punto-centrico">
+                                    <LIDocTitulo>
+                                        codeCountry (String): Código del país.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        codeCall (String): Código de llamada del país.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        numberWithoutCodeCall (String): Número sin el código de llamada.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        complete (String): Número completo.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        nameCountry (String): Nombre del país en inglés.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        nameCountryES (String): Nombre del país en español.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        formatNational (String): Número en formato nacional.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        formatInternational (String): Número en formato internacional.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        formatRFC3966 (String): Número en formato RFC3966.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        type (String): Tipo de número (móvil, fijo, etc.).
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        isPosible (Boolean): Indica si el número es posible.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        flagSVG_4x3 (String): URL de la bandera del país en formato 4×3.
+                                    </LIDocTitulo>
+                                    <LIDocTitulo>
+                                        flagSVG_1x1 (String): URL de la bandera del país en formato 1×1.
+                                    </LIDocTitulo>
+                                </ul>
                             </SubEnvolventeSeccion>
                         );
                     }
