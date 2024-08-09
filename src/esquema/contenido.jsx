@@ -94,6 +94,7 @@ const _ORIGEN_TEL_ = new GenerarContenidoLibreria({
                         Los números de teléfono varían en forma y se manejan de manera diferente de un país a otro.
                         el módulo de OrigenTel.js puede ayudarnos a formatear correctamente los números de teléfono
                         junto con los códigos de países y también validar campos en interfaces.
+                        <br />
                         <Code nocode className="link">
                             {thisObj.githubPage}/index.js
                         </Code>
